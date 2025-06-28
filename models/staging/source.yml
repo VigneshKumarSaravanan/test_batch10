@@ -1,0 +1,8 @@
+version: 2
+sources:
+    - name: source_data
+      database: "{{('sales')}}"
+      schema: raw_data
+      tables:
+        - name: raw_order
+        - name: raw_customers
