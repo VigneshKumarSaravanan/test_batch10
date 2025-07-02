@@ -23,3 +23,5 @@ sources:
         - name: raw_customers
         - name: test        
         - name: customers_snap
+        - name: emp_details
+        - name : product

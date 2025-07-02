@@ -1,0 +1,38 @@
+
+version: 2
+exposures:
+  - name: weekly_metrics
+    label: vignesh analytics
+    type: dashboard
+    maturity: high
+    description: 
+     For more exposure about project details
+    depends_on:
+      - ref('cent_calc')
+      - ref('customers')
+      - ref('emp_detail')
+      - ref('eph')
+      - ref('final')
+      - ref('orders_append')
+      - ref('orders_delete')
+      - ref('orders_hook')
+      - ref('orders_merge')
+      - ref('orders_overwrite')
+      - ref('orders')
+      - ref('table_detail')
+      - ref('employees')
+      - ref('orders_singular')
+      - ref('snap_customers_timestamp')
+      - ref('snap_customers_timestamp2')
+      - ref('snap_orders_timestamp')
+      - ref('snap_orders_timestamp2')
+      - source('datafeed_shared_schema','raw_data')
+      - source('datafeed_shared_schema','raw_order')
+      - source('datafeed_shared_schema','raw_customers')
+      - source('datafeed_shared_schema','test')
+      - source('datafeed_shared_schema','customers_snap')
+      - source('datafeed_shared_schema','emp_details')
+      - source('datafeed_shared_schema','product')
+    owner:
+      name:  vignesh
+      email: vigneshkumarans1996@gmail.com
