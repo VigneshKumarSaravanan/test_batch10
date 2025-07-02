@@ -5,4 +5,21 @@ sources:
       schema: raw_data
       tables:
         - name: raw_order
+          columns:
+           - name: ID
+             tests:
+              - not_null
+              - unique
+           - name: STATUS
+             tests:
+              - accepted_values:
+                  values: ['placed','shipped','completed','returned','return_pending']
+           - name: user_id
+             tests:
+              - relationships:
+                  field: id
+                  to: ref('customers')
+
         - name: raw_customers
+        - name: test        
+        - name: customers_snap
